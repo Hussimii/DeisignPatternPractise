@@ -61,14 +61,15 @@ class ShapeFactory(object):
             return testAddNewShape()
 
 
-shapeFactory = ShapeFactory()
+if __name__ == '__main__':
+    shapeFactory = ShapeFactory()
 
-shap1 = shapeFactory.getShape('Rectangle')
-shap2 = shapeFactory.getShape('Square')
-shap3 = shapeFactory.getShape('Circle')
-test = shapeFactory.getShape('Test')
+    shap1 = shapeFactory.getShape('Rectangle')
+    shap2 = shapeFactory.getShape('Square')
+    shap3 = shapeFactory.getShape('Circle')
+    test = shapeFactory.getShape('Test')
 
-shap1.draw()
-test.draw()
+    shap1.draw()
+    test.draw()
 # shap2.draw()
 # shap3.draw()
