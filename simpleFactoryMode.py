@@ -6,14 +6,20 @@ A FactoryPatternDemo, using the ShapeFactory to obtain Shape object.
 """
 
 
-class Shape(object):
-    # abstract class
+import abc
+
+
+# common interface
+class AbstractShape(object):
+    __metaclass__ = abc.ABCMeta
+
+    @abc.abstractmethod
     def draw(self):
         pass
 
 
 # entity classes implementing the abstract interface.
-class RectangleImplementsShape(Shape):
+class RectangleImplementsShape(AbstractShape):
     def __init__(self):
         print("this realize Interface")
 
@@ -21,7 +27,7 @@ class RectangleImplementsShape(Shape):
         print("Inside Rectangle::draw() method.")
 
 
-class CircleImplementsShape(Shape):
+class CircleImplementsShape(AbstractShape):
     def __init__(sell):
         print("this realize Interface")
 
@@ -29,7 +35,7 @@ class CircleImplementsShape(Shape):
         print("Inside Circle::draw() method")
 
 
-class SquareImplementsShape(Shape):
+class SquareImplementsShape(AbstractShape):
     def __init__(self):
         print("this realize interface")
 
@@ -37,7 +43,7 @@ class SquareImplementsShape(Shape):
         print("Inside Square::draw() method")
 
 
-class testAddNewShape(Shape):
+class testAddNewShape(AbstractShape):
     def __init__(self):
         print("this realize interface")
 
