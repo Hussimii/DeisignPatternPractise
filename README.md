@@ -6,3 +6,6 @@ url: https://segmentfault.com/a/1190000013053013
 
 2. Decorater.
 a decorated class modifed docorater_function with vars.
+
+3. Singleton.
+Starving? Lazy? Double-checked? with_lock?
